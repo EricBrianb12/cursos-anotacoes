@@ -1,0 +1,148 @@
+---------------------------------------------- *AULA 05* Conceito de variavel ----------------------------------------------------
+
+- No JS moderno além de utilizar a palavra VAR, também podemos
+usar a palvra LET para variaveis.
+
+--------------------------------------------------
+- Existem três formas de delimitar uma variavel do tipo string sendo elas
+
+	- ""  		aspas dupla.
+
+	- '' 			aspas simples -> não faz interpulação ou seja não reconhece as variaveis e tem que ser feito contatenação.
+
+	- `` 			craze	-> usa template string bas utilizar ${variavel} dentro da craze que o JS identifica como variavel.
+
+--------------------------------------------------
+
+- algumas regras para os identificadores (variaveis) do JS:
+	- podem começar com LETRA, $ ou _
+	-	não podem começar com números
+	- é possível usar acentos e simbolos
+
+- Em vez de ter numeros inteiros ou numeros float no JS é tudo NUMBER
+
+ALGUNS TIPOS PRIMITIVOS DE DADOS PRIMORDIAIS DO JS
+- number
+	-Infinity
+	-NaN
+- string
+- Boolean
+- null
+- undefined
+- object
+	- Array
+function
+
+DICAS:
+- Maiusculas e minusculas fazem diferença
+- utilizar o comando typeof + "nome variavel" faz com que ele mostre o tipo da variavel
+
+---------------------------------------------- *AULA 06* tratamento de dados ----------------------------------------------------
+
+
+- todos os valores passados no prompt é voltado como string.
+
+--------------------------------------------------
+- No JS a concatenação funciona com o sinal de + então quando eu precisar fazer uma adição
+tenho que converter a varialvel para number ou float com os comandos:
+
+Maneira do JS antigo:
+	- Number.parseInt(variavel aqui);
+	- Number.parseFloat(variavel aqui);
+
+Na nova versão do JS basta apenas colocar:
+	-	Number(nome da variavel);
+
+ele faz o papel de identificar se é inteiro ou real, mas não elimina a opção de usar os comandos antigos acima.
+Pois possívelmente em algum projeto pode ser que precisemos apenas de inteiro ou apenas numeros reais(float);
+
+--------------------------------------------------
+
+- Para converter de numero para string existem duas formas:
+	- String(variavel)
+	- variavel.toString()
+
+--------------------------------------------------
+	alguns atributos para formatação de string
+
+	nomeVariavel.length 					 // conta quantos caracteres tem a string.
+	nomeVariavel.toUpperCase() 		 // muda a string para maiuscula.
+	nomeVariavel.toLowerCase()		 // muda a string para minuscula.
+
+	alguns atributos para formatação de numeros
+
+	nomeVariavel.toFixed(2) 										// Adiciona duas casas decimais ao valor
+	nomeVariavel.toFixed(2).replace('.',',') 		// O replace troca uma informação por outra, no caso do código descrito o ponto por virgula
+	nomeVariavel.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})
+
+
+---------------------------------------------- *AULA 07* Operadores parte 1 ----------------------------------------------------
+
+Existem várias familias de Operadores no JS e o que vamos ver na aula são os
+
+ARITIMÉTICOS
+(+ , - , * , /, **-> esse operador seria o elevado exemplo 5 + 2 elevado a 2) 		
+
+	Ordem de precedência dos operadores ARITIMÉTICOS no  JS :
+
+	1º () Parenteses
+	2º ** Potencia (elevado)
+	3º *, /, % -> eles tem a mesma ordem de precedencia
+	4º +, -
+--------------------------------------------------
+ATRIBUIÇÃO
+(n++, n--, --n, ++n)
+	Exemplo de Auto Atribuição
+	var n = 3; -> atribuição simples.
+
+	n = n + 4 é igual há 7 -> auto atribuição
+	n += 4 é igual a 7 -> auto atribuição simplificada (a auto atribuição simplificada só funciona se ela receber ela mesmo mais um valor.)
+
+	Exemplo de incremento
+	O incremento é o ++ e -- em uma variavel exemplo:
+	var x =  5;
+	x = x + 1 =  6 
+	Utilizando o incremento para chegar no mesmo resultado
+	 x++ = 6
+
+	 Existem o pós incremento x++ e o pré incremento ++x que é o inverso.
+
+---------------------------------------------- *AULA 08* Operadores parte 2 ----------------------------------------------------
+RELACIONAIS
+(>, <, >=, <=, ==, !=, ===)
+	Toda expressão que tenha um operador relacional ligado a ela, o resultado dessa expressão
+	vai ser de valor booleano (verdadeiro ou falso).
+
+	Caso tenha uma operação ARITIMÉTICA junto com operadores relacionais, primeiro vai ser feito o calculo e depois
+	vai verificar a relação entre as duas variaveis, Exemplo:
+	var a = 5
+	var b = 7
+
+	a == b - 2 -> primeiro ele vai pegar o B - 2 e depois verifica se o A é igual o B.
+	Operadores relacionais não tem ordem de precedencia, sempre é lido da esquerda pra direita
+
+LÓGICOS
+(! && ||) 
+
+	em ordem de precedencia
+	! = negação / NÃO
+	&& = conjunção / E
+	|| disjunção / OU
+
+	Esses operadores são binários ou seja, vai a ver um verdadeiro ou falso.
+
+	quando temos vários operadores juntos o operador Lógico é o ultimo a ser lido pelo interpretador, Exemplo
+
+	a > b && b % 2 == 0
+
+	Primeiro vai ser feito o ARITIMÉTICO (%)
+	depois o relacional (>, ==) e por fim o LÓGICO (&&)
+
+TERNÁRIO
+(?, :)
+	Este operador se chama ternário pois ele utiliza três operandos sendo eles:
+	TESTE ? TRUE : FALSE
+
+	var media = 5.5; 
+	var aprovacao = 7;
+	média > aprovacao ? "Aprovado" : "reprovado" RESULTADO é igual a REPROVADO
