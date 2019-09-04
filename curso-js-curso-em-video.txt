@@ -192,3 +192,5 @@ Ou seja o DOM é uma arvore de elementos, e no js eu posso selecionar esses elem
 
 innerText -> traz o que está o texto  de um elemento.
 innerHTML -> traz o texto e mais os HTML usados para a formatação do texto.
+
+---------------------------------------------- *AULA 10* Eventos DOM ----------------------------------------------------
