@@ -168,7 +168,7 @@ history  -> Que vai guardando de onde você veio e pra onde você vai.
 Existem vários outros objetos, porém na aula foi somente mostrado esses três.
 
 Ou seja o DOM é uma arvore de elementos, e no js eu posso selecionar esses elementos:
-	- por marca (tags)
+	- por marca (tagName)
 		getElementsByTagName()
 
 	- por ID
@@ -194,3 +194,40 @@ innerText -> traz o que está o texto  de um elemento.
 innerHTML -> traz o texto e mais os HTML usados para a formatação do texto.
 
 ---------------------------------------------- *AULA 10* Eventos DOM ----------------------------------------------------
+o DOM (document object model) é o facilitador que existe no navegador para dar acesso ao JS.
+
+--------------------------------------------------
+Evento é tudo aquilo que pode acontecer/podemos fazer com o elemento. O demonstrado no curso foi o evento com Mouse.
+Supondo que tenhamos uma div, e passamos o mouse sobre ele, movimentamos, clicamos e seguramos, clicamos e soltamos
+e tiramos o mouse, pra cada uma dessas ações existe um evento, são eles:
+
+- mouseenter											- mouseup (quando está segurando e solta)
+- mousemove												-	click
+- mousedown(clica e segura)				- mouseout
+
+para ter uma documentação dos eventos e saber sobre mais alguns basta entrar no site da mozilla
+https://developer.mozilla.org/pt-BR/docs/Web/Events
+
+--------------------------------------------------
+Função são linhas de códigos que será executado quando nosso evento acontecer.
+Exemplo de função no JS:
+
+Function ação(parametro) {
+	código
+}
+
+--------------------------------------------------
+Existem duas formas de declarar os eventos no nosso código são eles por HTML e diretamente no JS.
+
+No HTML ficaria da seguinte forma:
+<button onclick="clilcar()" onmouseenter="entrar()"></button> 
+
+é informado as funções direto no código HTML, já pelo javascript nós usamos o Listener.
+
+Utilizando os mesmos eventos no JavaScript fica da seguinte forma:
+
+var umaVarial = window.document.getByElementId("algum id") -> declaração da variavel
+umaVariavel.addEventListener('click', clicar) -> informando o evento com o nome da funcao
+umaVariavel.addEventListener('mouseenter','entrar') -> informando o evento com o nome da funcao
+
+---------------------------------------------- *AULA 11* Condições ----------------------------------------------------
