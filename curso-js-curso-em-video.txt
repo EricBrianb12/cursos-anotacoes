@@ -231,3 +231,61 @@ umaVariavel.addEventListener('click', clicar) -> informando o evento com o nome 
 umaVariavel.addEventListener('mouseenter','entrar') -> informando o evento com o nome da funcao
 
 ---------------------------------------------- *AULA 11* Condições ----------------------------------------------------
+Condições é uma estrutura de controle.
+Existem alguns tipos de condição, na aula foram apresentados dois tipos
+
+CONDIÇÃO SIMPLES:
+if(condicao) {
+	
+}
+
+CONDIÇÃO COMPOSTA:
+(if, if e else, switch)
+
+if (condicao) {
+	true
+}else {
+	false
+}
+---------------------------------------------- *AULA 12* Condições(PARTE 2) ----------------------------------------------------
+CONDIÇÃO ANINHADAS
+com essa condição podemos fazer vários if/else
+
+exemplo:
+
+if (condição) {
+	bloco 1
+}else {
+	if (condição 2) {
+		bloco 2
+	}else {
+		bloco 3
+	}
+}
+
+CONDIÇÃO MULTIPLA
+Essa condição se chama switch e ela serve para valores fixos
+
+exemplo:
+
+switch(expressão) {  //OBS: note que dentro do parantese é declarado uma expressão e não uma condição
+	case valor1:
+		bloco
+		break  //O break veio desde a linguagem C e ele é obrigatório para o funcionamento do switch
+	case valor2:
+		bloco
+		break
+	case valor3:
+		bloco
+		break
+	default
+		bloco
+		break // O break no default é opcional
+}	
+
+
+*BREAK -> quando executamos o switch e temos um case que se encaixou na nossa espressão o sistema executa o bloco deste case e depois de executado,
+o sistema procura pelo break para encerrar a utilização do switch. Caso o sistema não ache, ele executará todos os blocos seguintes para depois 
+ser finalizado.
+
+No switch só funciona numeros inteiros e strings
