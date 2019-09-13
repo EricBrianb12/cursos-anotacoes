@@ -289,3 +289,4 @@ o sistema procura pelo break para encerrar a utilização do switch. Caso o sist
 ser finalizado.
 
 No switch só funciona numeros inteiros e strings
+---------------------------------------------- *AULA 13* exercicios ----------------------------------------------------
